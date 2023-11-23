@@ -9,7 +9,7 @@
 
     --text-color: #F1B2CE;
     --h2-color: #DB00FF;
-    --h3-color: #FF0070;
+    --section-header-color: #FF0070;
     --h4-color: var(--background-color, #000028);
     --h4-background-color: var(--text-color, #F1B2CE);
 }
