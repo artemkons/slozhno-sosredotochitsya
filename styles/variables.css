@@ -4,12 +4,8 @@
 */
 
 :root {
-    --background-color: #000028;
-    --background-accent-color: #F1B2CE;
-
+    --accent-color: #FF0070;
+    --accent-text-color: #000028;
+    --main-heading-color: #DB00FF;
     --text-color: #F1B2CE;
-    --h2-color: #DB00FF;
-    --section-header-color: #FF0070;
-    --h4-color: var(--background-color, #000028);
-    --h4-background-color: var(--text-color, #F1B2CE);
 }
