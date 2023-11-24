@@ -4,7 +4,7 @@
     /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
     padding: 10px;
     font-family: IBM Plex Mono, sans-serif;
-    background-image: url("../images/cover-image.png");
+    background-image: var(--background-image, url("../images/cover-image.png"));
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -28,8 +28,8 @@
     display: block;
     width: 25px;
     height: 25px;
-    border-top: 1px solid var(--accent-color, #FF0070);
-    border-right: 1px solid var(--accent-color, #FF0070);
+    border-top: 1px solid var(--secondary-color, #FF0070);
+    border-right: 1px solid var(--secondary-color, #FF0070);
 }
 
 .decorated-zone::after {
@@ -40,8 +40,8 @@
     display: block;
     width: 25px;
     height: 25px;
-    border-bottom: 1px solid var(--accent-color, #FF0070);
-    border-left: 1px solid var(--accent-color, #FF0070);
+    border-bottom: 1px solid var(--secondary-color, #FF0070);
+    border-left: 1px solid var(--secondary-color, #FF0070);
 }
 
 .header {
@@ -75,6 +75,10 @@
     margin-block-start: 65px;
 }
 
+.header__theme-menu-button_active {
+    pointer-events: none;
+}
+
 @media (768px <= width < 1024px) {
     .header__theme-menu {
         margin-block-start: 168px;
@@ -106,7 +110,7 @@
 .header__theme-menu-button {
     border: 1px solid transparent;
     padding: 1px 13px;
-    color: var(--accent-color, #FF0070);
+    color: var(--secondary-color, #FF0070);
     font-size: 18px;
     text-transform: lowercase;
     background: transparent;
@@ -117,6 +121,10 @@
 }
 
 .header__theme-menu-button:focus {
+    outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
     border: 1px solid transparent;
     border-block-end-color: currentColor;
 }
@@ -196,7 +204,7 @@
 }
 
 .article-heading {
-    color: var(--accent-color, #FF0070);
+    color: var(--secondary-color, #FF0070);
     font-weight: 700;
     font-size: 18px;
     line-height: 1.3;
@@ -225,11 +233,11 @@
         column-gap: 20px;
     }
 
-   .two-cols-layout__content {
-       .sub-heading:first-child {
-           margin-block-start: 0;
-       }
-   }
+    .two-cols-layout__content {
+        .sub-heading:first-child {
+            margin-block-start: 0;
+        }
+    }
 }
 
 @media (width >= 1024px) {
@@ -273,6 +281,10 @@
 }
 
 .text-link:focus {
+    outline: none;
+}
+
+.text-link:focus-visible {
     border: 1px solid currentColor;
 }
 
