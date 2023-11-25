@@ -8,6 +8,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 @media (width >= 768px) {
@@ -47,8 +48,8 @@
 .header {
     display: flex;
     flex-direction: column;
-    border: solid 1px transparent;
     height: calc(100dvh - 20px);
+    border: solid 1px transparent;
 }
 
 @media (width >= 768px) {
