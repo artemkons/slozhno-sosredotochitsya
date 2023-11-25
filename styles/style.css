@@ -2,17 +2,20 @@
 
 .page {
     /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-    padding: 10px;
     font-family: IBM Plex Mono, sans-serif;
-    background-image: var(--background-image, url("../images/cover-image.png"));
+    background-image: var(--background-image, url("../images/cover-image-dark.png"));
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
 
+.main {
+    padding: 10px;
+}
+
 @media (width >= 768px) {
-    .page {
+    .main {
         padding: 20px;
     }
 }
@@ -48,13 +51,13 @@
 .header {
     display: flex;
     flex-direction: column;
-    height: calc(100dvh - 20px);
+    min-height: calc(100dvh - 20px);
     border: solid 1px transparent;
 }
 
 @media (width >= 768px) {
     .header {
-        height: calc(100dvh - 40px);
+       min-height: calc(100dvh - 40px);
     }
 }
 
