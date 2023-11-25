@@ -45,7 +45,16 @@
 }
 
 .header {
+    display: flex;
+    flex-direction: column;
     border: solid 1px transparent;
+    height: calc(100dvh - 20px);
+}
+
+@media (width >= 768px) {
+    .header {
+        height: calc(100dvh - 40px);
+    }
 }
 
 .header__rec {
@@ -138,7 +147,7 @@
 }
 
 .header__main-heading {
-    margin: 65px 0 55px;
+    margin: auto 0;
 }
 
 @media (width >= 768px) {
@@ -147,14 +156,7 @@
     }
 
     .header__main-heading {
-        margin: 173px 0 162px -20px;
-    }
-}
-
-@media (width >= 1024px) {
-    .header__main-heading {
-        margin-top: 275px;
-        margin-bottom: 114px;
+        margin-left: -20px;
     }
 }
 
