@@ -10,13 +10,13 @@
     background-attachment: fixed;
 }
 
-.main {
-    padding: 10px;
+.header, .main, .footer {
+    margin: 10px;
 }
 
 @media (width >= 768px) {
-    .main {
-        padding: 20px;
+    .header, .main, .footer {
+        margin: 20px;
     }
 }
 
@@ -88,10 +88,6 @@
     margin-block-start: 65px;
 }
 
-.header__theme-menu-button_active {
-    pointer-events: none;
-}
-
 @media (768px <= width < 1024px) {
     .header__theme-menu {
         margin-block-start: 168px;
@@ -142,6 +138,11 @@
     border-block-end-color: currentColor;
 }
 
+.header__theme-menu-button_active {
+    border: 1px solid currentColor;
+    pointer-events: none;
+}
+
 .main-heading {
     color: var(--main-heading-color, #DB00FF);
     font-weight: 700;
@@ -151,7 +152,19 @@
 }
 
 .header__main-heading {
-    margin: auto 0;
+    margin: auto 0 55px;
+}
+
+@media (768px <= width < 1024px) {
+    .header__main-heading {
+        margin-bottom: 162px;
+    }
+}
+
+@media (width >= 1024px) {
+    .header__main-heading {
+        margin-bottom: 114px;
+    }
 }
 
 @media (width >= 768px) {
@@ -199,17 +212,17 @@
     }
 }
 
-.article {
+.section {
     margin-block-start: 50px;
 }
 
 @media (width >= 768px) {
-    .article {
+    .section {
         margin-block-start: 80px;
     }
 }
 
-.article-heading {
+.section-heading {
     color: var(--secondary-color, #FF0070);
     font-weight: 700;
     font-size: 18px;
@@ -217,13 +230,13 @@
 }
 
 @media (768px <= width < 1024px) {
-    .article-heading {
+    .section-heading {
         max-width: 236px;
     }
 }
 
 @media (width >= 1024px) {
-    .article-heading {
+    .section-heading {
         max-width: 315px;
     }
 }
